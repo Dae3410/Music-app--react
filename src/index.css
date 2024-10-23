@@ -1,27 +1,120 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  background-color: #272525; 
+  min-height: 100vh;
+  color: #dd3b3b; 
+  flex-wrap: wrap;
+}
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+.card-image {
+  width: 100%; 
+  height: 150px; 
+  object-fit: cover; 
+}
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.card {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;    
+  justify-content: center; 
+  text-align: center;    
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  flex: 0 1 calc(50% - 20px); 
+  margin: 10px; 
+  background-color: #fff; 
+}
+
+.sidebar {
+  background-color: white; 
+  border-right: 1px solid #ddd; 
+  padding: 10px; 
+  width: 150px; 
+  height: 90vh; 
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); 
+  overflow-y: auto; 
+  transition: transform 0.3s ease; 
+}
+
+.sidebar-title {
+  font-size: 1.5rem; 
+  margin-bottom: 20px; 
+  color: #333; 
+}
+
+main {
+  display: inline-flex;
+  margin: 10px;
+  max-width: 700px;
+  border: 1px;
+  border-radius: 10px;
+  flex-wrap: wrap; 
+  justify-content: center;
+  text-align: center;    
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.783);
+  padding: 20px; 
+}
+
+.playlist-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+
+.playlist-names {
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.delete-button,
+.change-image-button,
+.update-name-button {
+  margin: 5px;
+  cursor: pointer;
+  padding: 5px 10px;
+  border: none;
+  background-color: #f44336; 
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.delete-button:hover,
+.change-image-button:hover,
+.update-name-button:hover {
+  opacity: 0.8; 
 }
 
 
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.playlist-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
 
+.playlist-form input {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.playlist-form button {
+  padding: 5px 10px;
+  background-color: #4CAF50; /
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.playlist-form button:hover {
+  background-color: #45a049; 
+}

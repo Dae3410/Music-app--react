@@ -1,34 +1,34 @@
-import React from 'react'
-import ProfileCard from './ProfileCard'
-import Playlist from './Playlist';
+import React, { useState } from 'react';
+import ProfileCard from './ProfileCard';
+import '../index.css'; // Ensure you import your CSS file
 
-const sidebarStyle: React.CSSProperties = {
-    backgroundColor: 'white', // Light gray background
-    borderRight: '1px solid #ddd', // Light gray border on the right
-    padding: '10px', // Padding inside the sidebar
-    width: '150px', // Fixed width for the sidebar
-    height: '90vh', // Full height
-    position: 'fixed', // Fixes the sidebar to the left
-    top: 0, // Align to the top
-    left: 0, // Align to the left
-    boxShadow: '2px 0 5px rgba(0, 0, 0, 0.1)', // Slight shadow for depth
-    overflowY: 'auto', // Allows scrolling if content overflows
+export default function Sidebar() {
+  const [isVisible, setIsVisible] = useState(true);
+
+  const toggleSidebar = () => {
+    setIsVisible(!isVisible);
   };
-  
-  const titleStyle: React.CSSProperties = {
-    fontSize: '1.5rem', // Title font size
-    marginBottom: '20px', // Space below the title
-    color: '#333', // Dark text color
-  };
-  
-  export default function Sidebar() {
-    return (
-      <div style={sidebarStyle}>
-        <h2 style={titleStyle}>User Profiles</h2>
-        <ProfileCard />
-        <ProfileCard />
-        <ProfileCard />
-      </div>
-    );
-  }
+
+  return (
+    <>
+      {isVisible && (
+        <div className="sidebar">
+          <h2 className="sidebar-title">User Profiles</h2>
+          <ProfileCard />
+          <ProfileCard />
+          <ProfileCard />
+          <button className="btn btn-light p-1 border" onClick={toggleSidebar}>
+            {"<"} 
+          </button>
+        </div>
+      )}
+      {!isVisible && (
+        <button className="btn btn-light p-1 border" onClick={toggleSidebar}>
+          {">"} 
+        </button>
+      )}
+    </>
+  ); 
+}
+
 
