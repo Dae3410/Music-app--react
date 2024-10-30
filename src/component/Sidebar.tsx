@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ProfileCard from './ProfileCard';
-import '../index.css'; // Ensure you import your CSS file
+import '../index.css'; // Ensure this imports your main styles
 
 export default function Sidebar() {
   const [isVisible, setIsVisible] = useState(true);
@@ -11,24 +11,18 @@ export default function Sidebar() {
 
   return (
     <>
-      {isVisible && (
-        <div className="sidebar">
-          <h2 className="sidebar-title">User Profiles</h2>
-          <ProfileCard />
-          <ProfileCard />
-          <ProfileCard />
-          <button className="btn btn-light p-1 border" onClick={toggleSidebar}>
-            {"<"} 
-          </button>
-        </div>
-      )}
-      {!isVisible && (
-        <button className="btn btn-light p-1 border" onClick={toggleSidebar}>
-          {">"} 
+      <div className={`sidebar ${isVisible ? 'visible' : 'hidden'}`}>
+        <h2 className="sidebar-title">User Profiles</h2>
+        <ProfileCard />
+        <ProfileCard />
+        <ProfileCard />
+        <button className="sidebar-toggle-btn" onClick={toggleSidebar} aria-label="Toggle sidebar">
+          {isVisible ? '>' : '<'}
         </button>
-      )}
+      </div>
     </>
-  ); 
+  );
 }
+
 
 

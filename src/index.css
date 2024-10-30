@@ -1,120 +1,175 @@
+/* Global Style for the Apple Music Clone */
 .app {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: Arial, sans-serif;
-  background-color: #272525; 
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  background-color: #1d1d1d; 
+  color: #e3e3e3; 
   min-height: 100vh;
-  color: #dd3b3b; 
-  flex-wrap: wrap;
+  padding: 0 20px;
 }
 
-.card-image {
-  width: 100%; 
-  height: 150px; 
-  object-fit: cover; 
-}
-
-.card {
-  display: flex;
-  flex-direction: column; 
-  align-items: center;    
-  justify-content: center; 
-  text-align: center;    
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-  flex: 0 1 calc(50% - 20px); 
-  margin: 10px; 
-  background-color: #fff; 
-}
-
+/* Sidebar */
 .sidebar {
-  background-color: white; 
-  border-right: 1px solid #ddd; 
-  padding: 10px; 
-  width: 150px; 
-  height: 90vh; 
-  position: fixed; 
-  top: 0; 
-  left: 0; 
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); 
-  overflow-y: auto; 
-  transition: transform 0.3s ease; 
+  background: linear-gradient(135deg, #f8f9fa, #e2e3e5); /* Soft gradient */
+  padding: 20px;
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 2px 0 15px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+  border-radius: 0 15px 15px 0;
+  transform: translateX(0);
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  color: #1a1a1a;
+}
+.sidebar.hidden {
+  transform: translateX(-100%);
 }
 
 .sidebar-title {
-  font-size: 1.5rem; 
-  margin-bottom: 20px; 
-  color: #333; 
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  margin-bottom: 15px;
 }
 
+/* Sidebar Toggle Button */
+.sidebar-toggle-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #bd0802; 
+  padding: 10px;
+  position: absolute;
+  top: 20px;
+  right: -30px;
+  transition: color 0.3s ease, transform 0.2s;
+}
+
+
+/* Profile Card Styling */
+.profile-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  width: 100%;
+}
+
+/* Main Content Area */
 main {
-  display: inline-flex;
-  margin: 10px;
-  max-width: 700px;
-  border: 1px;
-  border-radius: 10px;
-  flex-wrap: wrap; 
-  justify-content: center;
-  text-align: center;    
-  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.783);
-  padding: 20px; 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex;
+  padding: 20px;
+  margin-left: 250px;
+  gap: 20px;
+  max-width: 100%;
+  align-items: center;
 }
 
-.playlist-item {
+/* Music Card */
+.card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 10px;
-}
-
-.playlist-names {
-  font-size: 1.2rem;
   text-align: center;
-  margin: 10px 0;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: calc(50% - 20px);
+  max-width: 300px;
+  padding: 15px;
+  margin: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Playlist and Form Buttons */
 .delete-button,
 .change-image-button,
 .update-name-button {
-  margin: 5px;
-  cursor: pointer;
-  padding: 5px 10px;
+  background-color: #d3190f;
+  color: #fff;
   border: none;
-  background-color: #f44336; 
-  color: white;
-  border-radius: 5px;
-  transition: background-color 0.3s;
+  border-radius: 6px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s, transform 0.2s;
+  margin: 5px;
 }
 
 .delete-button:hover,
 .change-image-button:hover,
 .update-name-button:hover {
-  opacity: 0.8; 
+  background-color: #e53935;
+  transform: scale(1.05);
 }
-
 
 .playlist-form {
   display: flex;
   gap: 10px;
   margin-bottom: 20px;
+  width: 100%;
 }
 
 .playlist-form input {
-  padding: 5px;
+  padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 8px;
+  width: 70%;
+  color: #1a1a1a;
 }
 
 .playlist-form button {
-  padding: 5px 10px;
-  background-color: #4CAF50; /
+  padding: 8px 12px;
+  background-color: #007aff;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
 .playlist-form button:hover {
-  background-color: #45a049; 
+  background-color: #0066cc;
+  transform: scale(1.05);
+}
+
+/* General Text Styles */
+.playlist-names {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #333;
+  margin: 10px 0;
+}
+
+.title {
+  color: rgb(234, 234, 234);
+}
+
+.form {
+  color: white;
 }

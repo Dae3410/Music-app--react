@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import Sidebar from './component/Sidebar';
 import PlaylistCard from './component/PlaylistCard';
+import SwitchButton from './SwitchButton';
 
 const App: React.FC = () => {
   const [playlists, setPlaylists] = useState([
@@ -29,7 +30,7 @@ const App: React.FC = () => {
 
   return (
     <div className="app">
-      <h1>My Music App</h1>
+      <h1 className='title'>Apple Music Clone</h1>
       <main>
         {playlists.map(playlist => (
           <PlaylistCard 
@@ -42,6 +43,7 @@ const App: React.FC = () => {
         ))}
       </main>
       <Sidebar />
+        <SwitchButton />
     </div>
   );
 };
