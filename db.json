@@ -1,0 +1,173 @@
+{
+    "artists":[
+        {
+      "id": 1,
+      "name": "Taylor Swift",
+      "genre": "Pop",
+      "albums": [
+        {
+          "title": "1989",
+          "release_year": 2014,
+          "tracks": [
+            { "title": "Blank Space", "duration": "3:51" },
+            { "title": "Style", "duration": "3:51" }
+          ]
+        },
+        {
+          "title": "Lover",
+          "release_year": 2019,
+          "tracks": [
+            { "title": "Lover", "duration": "3:41" },
+            { "title": "You Need To Calm Down", "duration": "2:51" }
+          ]
+        }
+      ],
+      "top_songs": ["Shake It Off", "Love Story", "You Belong With Me"],
+      "social_media": {
+        "twitter": "https://twitter.com/taylorswift13",
+        "instagram": "https://www.instagram.com/taylorswift/"
+      }
+    },
+    {
+      "id": 5,
+      "name": "Ed Sheeran",
+      "genre": "Pop",
+      "albums": [
+        {
+          "title": "÷ (Divide)",
+          "release_year": 2017,
+          "tracks": [
+            { "title": "Shape of You", "duration": "3:54" },
+            { "title": "Castle on the Hill", "duration": "4:21" }
+          ]
+        },
+        {
+          "title": "x (Multiply)",
+          "release_year": 2014,
+          "tracks": [
+            { "title": "Thinking Out Loud", "duration": "4:41" },
+            { "title": "Photograph", "duration": "4:19" }
+          ]
+        }
+      ],
+      "top_songs": ["Shape of You", "Thinking Out Loud", "Perfect"],
+      "social_media": {
+        "twitter": "https://twitter.com/edsheeran",
+        "instagram": "https://www.instagram.com/teddysphotos/"
+      }
+    },   
+    {
+      "id": 8,
+      "name": "The Weeknd",
+      "genre": "R&B",
+      "albums": [
+        {
+          "title": "After Hours",
+          "release_year": 2020,
+          "tracks": [
+            { "title": "Blinding Lights", "duration": "3:20" },
+            { "title": "Save Your Tears", "duration": "3:36" }
+          ]
+        },
+        {
+          "title": "Starboy",
+          "release_year": 2016,
+          "tracks": [
+            { "title": "Starboy", "duration": "3:50" },
+            { "title": "I Feel It Coming", "duration": "4:29" }
+          ]
+        }
+      ],
+      "top_songs": ["Blinding Lights", "Save Your Tears", "Starboy"],
+      "social_media": {
+        "twitter": "https://twitter.com/theweeknd",
+        "instagram": "https://www.instagram.com/theweeknd/"
+      }
+    },     
+    {
+      "id": 4,
+      "name": "Beyoncé",
+      "genre": "Pop",
+      "albums": [
+        {
+          "title": "Lemonade",
+          "release_year": 2016,
+          "tracks": [
+            { "title": "Formation", "duration": "3:26" },
+            { "title": "Hold Up", "duration": "3:41" }
+          ]
+        },
+        {
+          "title": "Beyoncé",
+          "release_year": 2013,
+          "tracks": [
+            { "title": "Drunk in Love", "duration": "5:23" },
+            { "title": "Partition", "duration": "5:19" }
+          ]
+        }
+      ],
+      "top_songs": ["Formation", "Drunk in Love", "Halo"],
+      "social_media": {
+        "twitter": "https://twitter.com/Beyonce",
+        "instagram": "https://www.instagram.com/beyonce/"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Drake",
+      "genre": "Hip-Hop",
+      "albums": [
+        {
+          "title": "Scorpion",
+          "release_year": 2018,
+          "tracks": [
+            { "title": "In My Feelings", "duration": "3:38" },
+            { "title": "God's Plan", "duration": "3:19" }
+          ]
+        },
+        {
+          "title": "Views",
+          "release_year": 2016,
+          "tracks": [
+            { "title": "One Dance", "duration": "2:54" },
+            { "title": "Hotline Bling", "duration": "4:27" }
+          ]
+        }
+      ],
+      "top_songs": ["God's Plan", "Hotline Bling", "One Dance"],
+      "social_media": {
+        "twitter": "https://twitter.com/Drake",
+        "instagram": "https://www.instagram.com/champagnepapi/"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Adele",
+      "genre": "Soul",
+      "albums": [
+        {
+          "title": "25",
+          "release_year": 2015,
+          "tracks": [
+            { "title": "Hello", "duration": "4:55" },
+            { "title": "When We Were Young", "duration": "4:50" }
+          ]
+        },
+        {
+          "title": "21",
+          "release_year": 2011,
+          "tracks": [
+            { "title": "Rolling in the Deep", "duration": "3:48" },
+            { "title": "Someone Like You", "duration": "4:45" }
+          ]
+        }
+      ],
+      "top_songs": ["Hello", "Someone Like You", "Rolling in the Deep"],
+      "social_media": {
+        "twitter": "https://twitter.com/Adele",
+        "instagram": "https://www.instagram.com/adele/"
+      }
+    }
+  ]
+}
+  

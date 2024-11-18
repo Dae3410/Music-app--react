@@ -12,10 +12,11 @@ interface PlaylistCardProps {
   onDelete: (id: number) => void;
   onChangeImage: (id: number, newImageUrl: string) => void;
   onUpdateName: (id: number, newName: string) => void;
+  onClick: () => void; // New prop for handling main card click
 }
 
-const PlaylistCard: React.FC<PlaylistCardProps> = ({ playlist, onDelete, onChangeImage, onUpdateName }) => {
-
+const PlaylistCard: React.FC<PlaylistCardProps> = ({ playlist, onDelete, onChangeImage, onUpdateName, onClick }) => {
+  
   const handleImageChange = () => {
     const newImageUrl = prompt("Enter new image URL:", playlist.imageUrl)?.trim();
     if (newImageUrl) {
@@ -31,9 +32,9 @@ const PlaylistCard: React.FC<PlaylistCardProps> = ({ playlist, onDelete, onChang
   };
 
   return (
-    <div className="card playlist-item">
+    <button className="card playlist-item" onClick={onClick} aria-label={`Open playlist ${playlist.name}`}>
       <img 
-        className='card-image' 
+        className="card-image" 
         src={playlist.imageUrl} 
         alt={`Playlist cover for ${playlist.name}`} 
         onError={(e) => e.currentTarget.src = 'default-image-url.jpg'} 
@@ -41,28 +42,28 @@ const PlaylistCard: React.FC<PlaylistCardProps> = ({ playlist, onDelete, onChang
       <h2 className="playlist-names">{playlist.name}</h2>
       <div className="button-group">
         <button 
-          onClick={() => onDelete(playlist.id)} 
+          onClick={(e) => { e.stopPropagation(); onDelete(playlist.id); }} 
           className="delete-button" 
           aria-label="Delete playlist"
         >
           🗑️
         </button>
         <button 
-          onClick={handleImageChange} 
+          onClick={(e) => { e.stopPropagation(); handleImageChange(); }} 
           className="change-image-button" 
           aria-label="Change playlist image"
         >
           ✏️
         </button>
         <button 
-          onClick={handleNameUpdate} 
+          onClick={(e) => { e.stopPropagation(); handleNameUpdate(); }} 
           className="update-name-button" 
           aria-label="Update playlist name"
         >
           📝
         </button>
       </div>
-    </div>
+    </button>
   );
 }
 

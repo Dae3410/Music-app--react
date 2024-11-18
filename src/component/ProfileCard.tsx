@@ -1,11 +1,10 @@
-import React from 'react'
+import React from 'react';
 
-type Props = {}
+const ProfileCard = ({ profile }) => (
+  <div className="profile-card">
+    <h3>{profile.name}</h3>
+    <p>Genre: {profile.genre}</p>
+  </div>
+);
 
-const ProfileCard = (props: Props) => {
-  return (
-    <div className=''>ProfileCard</div>
-  )
-}
-
-export default ProfileCard
+export default ProfileCard;
